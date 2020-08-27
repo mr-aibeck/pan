@@ -49,7 +49,7 @@ export const WelcomeBlock = styled.div`
     background-size: 40%;
     background-position: right 120px;
     padding: 110px 80px 120px;
-    width: 610px;
+    width: 590px;
   }
 
   @media ${media.mobile} {

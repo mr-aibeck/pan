@@ -15,7 +15,7 @@ export const FooterWrap = styled.div`
 
   @media ${media.tablet} {
     padding: 0 80px;
-    width: 610px;
+    width: 590px;
   }
 
   @media ${media.mobile} {
