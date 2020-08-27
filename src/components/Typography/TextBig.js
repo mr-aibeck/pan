@@ -13,7 +13,7 @@ const TextBig = styled.span`
     line-height: 26px;
   }
 
-  @media ${media.laptop} {
+  @media ${media.tablet} {
     font-size: 15px;
     line-height: 22px;
   }

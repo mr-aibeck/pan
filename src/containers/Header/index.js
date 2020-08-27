@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Button from '../../components/Button';
 import Dropdown from '../../components/Dropdown';
-import H4 from '../../components/Typography/H4';
 import Icon from '../../components/Icon';
+import H4 from '../../components/Typography/H4';
 
 import {
   HeaderWrap,
@@ -14,6 +14,9 @@ import {
   MenuListItem,
   Title,
   Note,
+  StyledH4,
+  MenuDropdown,
+  MenuDropdownWrapper,
 } from './styled';
 
 const Header = () => {
@@ -40,15 +43,29 @@ const Header = () => {
           <Dropdown
             content={<MenuList>{content}</MenuList>}
           >
-            <H4>Пункт 1</H4>
+            <StyledH4>Пункт 1</StyledH4>
             <MenuIcon name="arrow" height="6px" width="10px" isOpen={isOpen} />
           </Dropdown>
         </MenuItem>
-        <MenuItem><H4>Пункт 2</H4></MenuItem>
-        <MenuItem><H4>Пункт 3</H4></MenuItem>
-        <MenuItem><H4>Пункт 4</H4></MenuItem>
-        <MenuItem><H4>Пункт 5</H4></MenuItem>
+        <MenuItem><StyledH4>Пункт 2</StyledH4></MenuItem>
+        <MenuItem><StyledH4>Пункт 3</StyledH4></MenuItem>
+        <MenuItem><StyledH4>Пункт 4</StyledH4></MenuItem>
+        <MenuItem><StyledH4>Пункт 5</StyledH4></MenuItem>
       </Menu>
+
+      <MenuDropdownWrapper
+        content={
+          <MenuDropdown>
+            <MenuItem><StyledH4>Пункт 1</StyledH4></MenuItem>
+            <MenuItem><StyledH4>Пункт 2</StyledH4></MenuItem>
+            <MenuItem><StyledH4>Пункт 3</StyledH4></MenuItem>
+            <MenuItem><StyledH4>Пункт 4</StyledH4></MenuItem>
+            <MenuItem><StyledH4>Пункт 5</StyledH4></MenuItem>
+          </MenuDropdown>
+        }
+      >
+        <H4>Меню</H4>
+      </MenuDropdownWrapper>
 
       <Button size="normal">Кнопка</Button>
     </HeaderWrap>

@@ -17,6 +17,11 @@ const H4 = styled.h4`
     font-size: 14px;
     line-height: 18px;
   }
+
+  @media ${media.mobile} {
+    font-size: 14px;
+    line-height: 18px;
+  }
 `;
 
 export default H4;

@@ -5,12 +5,25 @@ import Select from '../../components/Select';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import Checkbox from '../../components/Checkbox';
+import { media } from '../../components/utils/media';
 
 export const Title = styled(H1)`
   color: #FFFFFF;
   flex-grow: 1;
   margin-bottom: 47px;
   width: 560px;
+
+  @media ${media.laptop} {
+    width: 480px;
+  }
+
+  @media ${media.tablet} {
+    width: 310px;
+  }
+
+  @media ${media.mobile} {
+    width: 100%;
+  }
 `;
 
 export const WelcomeBlockWrapper = styled.div`
@@ -24,6 +37,26 @@ export const WelcomeBlock = styled.div`
   padding: 150px 0 176px;
   margin: 0 auto;
   width: 1200px;
+
+  @media ${media.laptop} {
+    background-size: 30%;
+    background-position: 860px 120px;
+    padding: 110px 140px 120px 140px;
+    width: 990px;
+  }
+
+  @media ${media.tablet} {
+    background-size: 40%;
+    background-position: right 120px;
+    padding: 110px 80px 120px;
+    width: 610px;
+  }
+
+  @media ${media.mobile} {
+    background: none;
+    padding: 110px 0px 120px;
+    width: 320px;
+  }
 `;
 
 export const Form = styled.form`
@@ -31,6 +64,15 @@ export const Form = styled.form`
   flex-wrap: wrap;
   justify-content: space-between;
   width: 720px;
+
+  @media ${media.tablet} {
+    width: 320px;
+  }
+
+  @media ${media.mobile} {
+    justify-content: center;
+    width: 320px;
+  }
 `;
 
 export const CustomOption = styled.div`
@@ -46,11 +88,29 @@ export const CustomOption = styled.div`
 export const StyledSelect = styled(Select)`
   flex-basis: 50%;
   max-width: 345px;
+
+  @media ${media.tablet} {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media ${media.mobile} {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
 `;
 
 export const StyledInput = styled(Input)`
   flex-basis: 50%;
   max-width: 345px;
+
+  @media ${media.tablet} {
+    flex-basis: 100%;
+  }
+
+  @media ${media.mobile} {
+    flex-basis: 100%;
+  }
 `;
 
 export const StyledButton = styled(Button)`
@@ -69,6 +129,10 @@ export const CheckboxWrap = styled.div`
 
 export const StyledCheckbox = styled(Checkbox)`
   width: 385px;
+
+  @media ${media.mobile} {
+    width: 100%;
+  }
 `;
 
 export const CheckboxNote = styled.span`

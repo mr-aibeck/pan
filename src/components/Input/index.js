@@ -26,7 +26,7 @@ const InnerInput = styled.input`
   }
 `;
 
-const Input = ({ label, placeholder, value, ...props }) => {
+const Input = ({ label, type, placeholder, value, ...props }) => {
   return (
     <InputWrapper {...props}>
       {label &&
@@ -34,7 +34,7 @@ const Input = ({ label, placeholder, value, ...props }) => {
           <Text>{label}</Text>
         </Label>
       }
-      <Text><InnerInput placeholder={placeholder} /></Text>
+      <Text><InnerInput type={type} placeholder={placeholder} /></Text>
     </InputWrapper>
   );
 }

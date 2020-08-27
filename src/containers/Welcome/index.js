@@ -31,6 +31,7 @@ function Welcome() {
           <StyledInput
             label="Выбрать город"
             placeholder="info@mail.ru"
+            type="email"
           />
 
           <StyledButton>Кнопка действия</StyledButton>

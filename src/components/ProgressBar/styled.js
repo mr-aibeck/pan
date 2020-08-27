@@ -2,11 +2,20 @@ import styled from 'styled-components';
 import Button from '../../components/Button';
 import H4 from '../../components/Typography/H4';
 import Text from '../../components/Typography/Text';
+import { media } from '../../components/utils/media';
 
 export const ProgressBarWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 470px;
+
+  @media ${media.laptop} {
+    width: 385px;
+  }
+
+  @media ${media.tablet} {
+    width: 295px;
+  }
 `;
 
 export const ProgressOuter = styled.div`
@@ -24,12 +33,28 @@ export const ProgressInner = styled.div`
   display: flex;
   justify-content: center;
   transition: 0.2s;
-  width: ${({ percent }) => percent > 5 ? `${percent}%` : '95px'}
+  width: ${({ percent }) => percent > 5 ? `${percent}%` : '95px'};
+
+  @media ${media.tablet} {
+    width: ${({ percent }) => percent > 5 ? `${percent}%` : '68px'}
+  }
+
+  @media ${media.mobile} {
+    width: ${({ percent }) => percent > 5 ? `${percent}%` : '55px'}
+  }
 `;
 
 export const Note = styled(Text)`
   flex-basis: 55%;
   margin-left: 30px;
+
+  @media ${media.laptop} {
+    margin-left: 24px;
+  }
+
+  @media ${media.tablet} {
+    margin-left: 16px;
+  }
 `;
 
 export const Percent = styled(H4)`
@@ -38,6 +63,15 @@ export const Percent = styled(H4)`
 
 export const StyledButton = styled(Button)`
   width: 180px;
+
+  @media ${media.laptop} {
+    min-width: 180px;
+  }
+
+  @media ${media.tablet} {
+    min-width: 108px;
+    width: 108px;
+  }
 `;
 
 export const ProgressControls = styled.div`

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import H4 from '../Typography/H4';
+import { media } from '../../components/utils/media';
 
 const BUTTON_HEIGHT = {
   large: '60px',
@@ -32,6 +33,15 @@ export const Button = styled.button`
   box-sizing: border-box;
   text-align: center;
   padding: 0 40px;
+
+  @media ${media.tablet} {
+    padding: 0 30px;
+  }
+
+  @media ${media.mobile} {
+    padding: 0 25px;
+    height: 40px;
+  }
 
   &:hover {
     box-shadow: 0px 10px 20px rgba(255, 45, 35, 0.3);
